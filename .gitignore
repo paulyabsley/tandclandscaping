@@ -1,0 +1,9 @@
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+Thumbs.db
+.sass-cache
+.sass-cache/*
+style.css.map
+style.css.map/*
