@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!doctype html>
 <html dir="ltr" lang="en">
 <head>
-	<meta charset="UTF-8">';
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Town &amp; Country Landscaping | Somerset Landscape Gardeners</title>
