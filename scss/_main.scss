@@ -1,0 +1,35 @@
+.intro,
+.driveways,
+.design {
+	margin-bottom: 30px;
+}
+
+.intro {
+	img {
+		margin-left: 5%;
+		width: 40%;
+	}
+}
+
+.driveways {
+	img {
+		margin-right: 5%;
+		width: 40%;
+	}
+}
+
+.design {
+	div	{
+		width: 55%;
+	}
+	p {
+		width: 100%;
+	}
+}
+
+main a img {
+	border: 9px solid #999;
+	&:hover {
+		border: 9px solid #666;
+	}
+}

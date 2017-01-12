@@ -1,0 +1,58 @@
+body {
+	background: #dadcca;
+	background: #333;
+}
+
+.wrapper {
+	background: #fff;
+	margin: 15px auto;
+	max-width: 960px;
+	padding: 15px;
+}
+
+main {
+	background-color: #f3f3f3;
+	margin: 15px 0;
+	padding: 15px;
+}
+
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote {
+	margin-bottom: 20px;
+}
+
+h1, h2 {
+	color: #060;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.4rem;
+}
+
+p {
+	color: #333;
+	font-size: 1em;
+	font-family: Arial, Calibri, Verdana;
+	line-height: 1.4;
+	max-width: 35rem;
+	width: 55%;
+}
+
+img {
+	max-width: 100%;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}

@@ -41,7 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$body .= '<p><strong>Email: </strong>' . $email . '</p>';
 		$body .= '<p><strong>Message: </strong>' . $message . '</p></body></html>';
 
-		if (mail($to, $subject, $body, $headers)) {
+		$sent = mail($to, $subject, $body, $headers);
+
+		if ($sent) {
 			$action = true;
 			session_destroy();
 		}
@@ -57,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Town &amp; Country Landscaping | Somerset Landscape Gardeners</title>
 	<meta name="description" content="Town &amp; Country Landscaping are an established providers of all manner of landscaping services; driveways, patios, walling, fencing, block paviors, gates, brickwork and more.">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 	<script type="text/javascript" src="js/prototype.js"></script>
 	<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
@@ -73,34 +75,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	</script>
 </head>
 <body id="top">
-	<div id="wrapper">
-		<div id="header">
-			<img src="images/logo.png" alt="Town &amp; Country Landscaping Logo">
-		</div>
-		<div id="content">
-			<div id="contact">
-				<img src="images/telelphoneIcon.png" width="40" height="40" alt="Telephone">
-				<ul>
-					<li>m: 07714 280095</li>
-					<li>&nbsp; t: 01823 257435</li>
+	<div class="wrapper">
+		<header>
+			<img src="images/logo.png" alt="Town &amp; Country Landscaping" class="logo">
+		</header>
+		<main>
+			<div class="menu cf">
+				<div class="telephone">
+					<img src="images/telelphoneIcon.png" width="40" height="40" alt="Telephone">
+					<ul>
+						<li>m: 07714 280095</li>
+						<li>&nbsp; t: 01823 257435</li>
+					</ul>
+				</div>
+				<ul class="nav">
+					<li><a href="#ourWork" title="See pictures of our work">Our Work</a></li>
+					<li><a href="#contactUs" title="Contact">Contact</a></li>
 				</ul>
 			</div>
-			<ul>
-				<li><a href="#ourWork" title="See pictures of our work">Our Work</a></li>
-				<li><a href="#contactUs" title="Contact">Contact</a></li>
-			</ul>
-			<hr />
-			<div id="welcome">
+			<div class="intro cf">
 				<h1>Town &amp; Country Landscaping</h1>
-				<p>Operating from the county town of Somerset Taunton, Town &amp; Country Landscaping are an established company providing high quality, private landscaping services to the area for over 10 years. Andy Yabsley and John White, the company partners, offer a friendly, professional service from start to finish with emphasis on high standards, whatever the requirements.</p>
-				<h2>Driveways, patios and fencing</h2>
-				<p>We specialise in driveways, patios and fencing, but also offer a range of other landscaping services such as decking, turfing and brick or stone walling. Close links with other relevant professionals such as builders, tree surgeons and with a range of suppliers means that we are able to deliver almost anything you may wish for in your garden.</p>
-				<h2>Oak framed buildings</h2>
-				<p>We also have expertise in constructing oak framed buildings, for example garages and other structures for your garden.</p>
-				<h2>Garden design</h2>
-				<p>We can undertake complete garden make overs to our own design or work with designs from other landscape architects.</p>
+				<p class="left">Operating from the county town of Somerset Taunton, Town &amp; Country Landscaping are an established company providing high quality, private landscaping services to the area for over 10 years. Andy Yabsley and John White, the company partners, offer a friendly, professional service from start to finish with emphasis on high standards, whatever the requirements.</p>
+				<a href="images/l_patio01.jpg" rel="lightbox" title="Town &amp; Country Landscaping Garden Patio"><img src="images/s_patio01.jpg" alt="Block pavior garden patio" class="right"></a>
 			</div>
-			<a href="images/l_blockDriveway01.jpg" rel="lightbox" title="Town &amp; Country Landscaping block pavior driveway"><img src="images/s_blockDriveway01.jpg" alt="Block pavior driveway" id="hmPicture"></a>
+			<div class="driveways cf">
+				<h2>Driveways, patios and fencing</h2>
+				<a href="images/l_blockDriveway01.jpg" rel="lightbox" title="Town &amp; Country Landscaping block pavior driveway"><img src="images/s_blockDriveway01.jpg" alt="Block pavior driveway" class="left"></a>
+				<p class="right">We specialise in driveways, patios and fencing, but also offer a range of other landscaping services such as decking, turfing and brick or stone walling. Close links with other relevant professionals such as builders, tree surgeons and with a range of suppliers means that we are able to deliver almost anything you may wish for in your garden.</p>
+			</div>
+			<div class="design cf">
+				<h2>Oak framed buildings</h2>
+				<div class="left">
+					<p>We also have expertise in constructing oak framed buildings, for example garages and other structures for your garden.</p>
+					<h2>Garden design</h2>
+					<p>We can undertake complete garden make overs to our own design or work with designs from other landscape architects.</p>
+				</div>
+				<a href="images/l_timberFrame01.jpg" rel="lightbox" title="Town &amp; Country Landscaping timber frame garage"><img src="images/s_timberFrame01.jpg" alt="Timber frame car port" class="right"></a>
+			</div>
 			<blockquote cite="Mike and Maggie Blake &mdash; Town &amp; Country Landscaping customer">
 				<p>&ldquo;<em>Very many thanks for the excellent work on my greenhouse base (now my second home!) and for our lovely new patio, it has made such a difference. We were very impressed, not only with the quality of your work but also by your entire work ethic. You turned up when you said you would, consulted us at every turn and left all clean and tidy &mdash; you are in great danger of giving the building profession a good name!</em> &mdash; Mike and Maggie Blake</p>
 			</blockquote>
@@ -115,32 +126,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<div id="examples">
 				<h3 id="ourWork">Some examples of our work</h3>
 				<p>Select the thumbnails below to see pictures of our work: driveways, fencing, patios, decking, gates, walling and other landscaping services. The pictures will open larger for a better view and with a dark background, you can navigate to the previous and next photos by clicking either the left or right side of the photo or by using the arrow keys on your keyboard. To return to the website click the close button or anywhere outside the picture.</p>
-				<a href="images/l_workExample01.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample01.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample02.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample02.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample03.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample03.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample04.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample04.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample05.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample05.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample06.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample06.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample07.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample07.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample08.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample08.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample01.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample01.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample02.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample02.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample03.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample03.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample04.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample04.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample05.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample05.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample06.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample06.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample07.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample07.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample08.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample08.jpg" class="pictures" alt=""></a>
 				<blockquote cite="Karen Jones &mdash; Town &amp; Country Landscaping customer">
 					<p>&ldquo;<em>Thank you for all your hard work on the driveway and the lawn, we are really pleased with them!</em>&rdquo; &mdash; Karen Jones</p>
 				</blockquote>
-				<a href="images/l_workExample09.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample09.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample10.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample10.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample11.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample11.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample12.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample12.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample13.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample13.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample14.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample14.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample15.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample15.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample16.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample16.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample09.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample09.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample10.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample10.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample11.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample11.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample12.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample12.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample13.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample13.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample14.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample14.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample15.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample15.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample16.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample16.jpg" class="pictures" alt=""></a>
 				<blockquote cite="Peggy Hendy &mdash; Town &amp; Country Landscaping customer">
 					<p>&ldquo;<em>Thanks to you both for a job well done, you have completely exceeded our expectations!</em>&rdquo; &mdash; Peggy Hendy</p>
 				</blockquote>
-				<a href="images/l_workExample17.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample17.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample18.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample18.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample19.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample19.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample20.jpg" rel="lightbox[hmExamples]" title=""><img src="images/s_workExample20.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample17.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample17.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample18.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample18.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample19.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample19.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample20.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample20.jpg" class="pictures" alt=""></a>
 			</div>
 			<hr>
 			<div id="contactUs">
@@ -191,11 +202,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					}
 				?>
 			</div>
-		</div>
-		<div id="footer">
+		</main>
+		<footer>
 			<p><a href="#top" title="Jump to Top">&uarr; Top</a> | <a href="mailto:jwhite2820@btinternet.com" title="Email us for more information">Email</a> or give us a call on 07714 280095 for more information or a quote</p>
 			<p>&copy; <?= date('Y'); ?> Town &amp; Country Landscaping | <a href="http://www.uksmallbusinessdirectory.co.uk/id.asp?CompanyID=127513" title="UK Small Business Directory Listing">UKSBD Listing</a></p>
-		</div>
+		</footer>
 	</div>
 </body>
 </html>
