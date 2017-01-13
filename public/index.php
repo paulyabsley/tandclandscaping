@@ -89,8 +89,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					</ul>
 				</div>
 				<ul class="nav">
-					<li><a href="#ourWork" title="See pictures of our work">Our Work</a></li>
-					<li><a href="#contactUs" title="Contact">Contact</a></li>
+					<li><a href="#work" title="See examples our work">Our Work</a></li>
+					<li><a href="#contact" title="Contact">Contact</a></li>
 				</ul>
 			</div>
 			<div class="intro cf">
@@ -112,20 +112,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				</div>
 				<a href="images/l_timberFrame01.jpg" rel="lightbox" title="Town &amp; Country Landscaping timber frame garage"><img src="images/s_timberFrame01.jpg" alt="Timber frame car port" class="right"></a>
 			</div>
-			<blockquote cite="Mike and Maggie Blake &mdash; Town &amp; Country Landscaping customer">
-				<p>&ldquo;<em>Very many thanks for the excellent work on my greenhouse base (now my second home!) and for our lovely new patio, it has made such a difference. We were very impressed, not only with the quality of your work but also by your entire work ethic. You turned up when you said you would, consulted us at every turn and left all clean and tidy &mdash; you are in great danger of giving the building profession a good name!</em> &mdash; Mike and Maggie Blake</p>
+			<blockquote>
+				<p>&ldquo;Very many thanks for the excellent work on my greenhouse base (now my second home!) and for our lovely new patio, it has made such a difference. We were very impressed, not only with the quality of your work but also by your entire work ethic. You turned up when you said you would, consulted us at every turn and left all clean and tidy &mdash; you are in great danger of giving the building profession a good name!&rdquo;</p>
+				<cite> &mdash;&nbsp;Mike and Maggie&nbsp;Blake</cite>
 			</blockquote>
-			<div id="brett">
-				<p>You can see some pictures of the sort of services we provide here on our website, and if you would like a no obligations quote please give Andy or John a call, on either of the above numbers, so that we can arrange to visit you and discuss your requirements. It may also be possible to arrange to view some of the contracts which we have completed.</p>
-				<p>We source and use the best high quality materials to create handsome, usable and convenient outdoor spaces &mdash; from driveways and patios to fencing, gates and decking, or turfing and brick or stone walling &mdash; that can add value to your property.</p>
+			<div class="services cf">
+				<div class="left">
+					<p>We source and use the best high quality materials to create handsome, usable and convenient outdoor spaces &mdash; from driveways and patios to fencing, gates and decking, or turfing and brick or stone walling &mdash; that can add value to your property.</p>
+					<p>If you would like a no obligations quote please give us a call. We can arrange to visit you and discuss your requirements. It may also be possible to arrange viewings of some of the contracts which we have completed.</p>
+				</div>
+				<a href="images/l_blockDriveway02.jpg" rel="lightbox" title="Town &amp; Country Landscaping block pavior drive and entrance way"><img src="images/s_blockDriveway02.jpg" alt="Block pavior drive and entrance way" class="right"></a>
 			</div>
-			<blockquote cite="Sue Collard &mdash; Town &amp; Country Landscaping customer">
-				<p>&ldquo;<em>Thank you so much for a wonderful job. My friends and family are well impressed and I am over the moon!</em>&rdquo; &mdash; Sue Collard</p>
-				</blockquote>
-			<hr />
-			<div id="examples">
-				<h3 id="ourWork">Some examples of our work</h3>
-				<p>Select the thumbnails below to see pictures of our work: driveways, fencing, patios, decking, gates, walling and other landscaping services. The pictures will open larger for a better view and with a dark background, you can navigate to the previous and next photos by clicking either the left or right side of the photo or by using the arrow keys on your keyboard. To return to the website click the close button or anywhere outside the picture.</p>
+			<blockquote>
+				<p>&ldquo;Thank you so much for a wonderful job. My friends and family are well impressed and I am over the moon!&rdquo;</p>
+				<cite> &mdash;&nbsp;Sue&nbsp;Collard</cite>
+			</blockquote>
+			<div id="work" class="portfolio">
+				<h2>Our work</h2>
+				<p>Click the thumbnails below to see examples of driveways, fencing, patios, decking, gates, and walling we have created.</p>
 				<a href="images/l_workExample01.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample01.jpg" class="pictures" alt=""></a>
 				<a href="images/l_workExample02.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample02.jpg" class="pictures" alt=""></a>
 				<a href="images/l_workExample03.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample03.jpg" class="pictures" alt=""></a>
@@ -135,7 +139,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<a href="images/l_workExample07.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample07.jpg" class="pictures" alt=""></a>
 				<a href="images/l_workExample08.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample08.jpg" class="pictures" alt=""></a>
 				<blockquote cite="Karen Jones &mdash; Town &amp; Country Landscaping customer">
-					<p>&ldquo;<em>Thank you for all your hard work on the driveway and the lawn, we are really pleased with them!</em>&rdquo; &mdash; Karen Jones</p>
+					<p>&ldquo;Thank you for all your hard work on the driveway and the lawn, we are really pleased with them!&rdquo;</p>
+					<cite> &mdash;&nbsp;Karen&nbsp;Jones</p>
 				</blockquote>
 				<a href="images/l_workExample09.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample09.jpg" class="pictures" alt=""></a>
 				<a href="images/l_workExample10.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample10.jpg" class="pictures" alt=""></a>
@@ -146,7 +151,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<a href="images/l_workExample15.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample15.jpg" class="pictures" alt=""></a>
 				<a href="images/l_workExample16.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample16.jpg" class="pictures" alt=""></a>
 				<blockquote cite="Peggy Hendy &mdash; Town &amp; Country Landscaping customer">
-					<p>&ldquo;<em>Thanks to you both for a job well done, you have completely exceeded our expectations!</em>&rdquo; &mdash; Peggy Hendy</p>
+					<p>&ldquo;Thanks to you both for a job well done, you have completely exceeded our expectations!&rdquo;</p>
+					<cite> &mdash;&nbsp;Peggy&nbsp;Hendy</cite>
 				</blockquote>
 				<a href="images/l_workExample17.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample17.jpg" class="pictures" alt=""></a>
 				<a href="images/l_workExample18.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample18.jpg" class="pictures" alt=""></a>
@@ -154,8 +160,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<a href="images/l_workExample20.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample20.jpg" class="pictures" alt=""></a>
 			</div>
 			<hr>
-			<div id="contactUs">
-				<h3>Contact Us</h3>
+			<div id="contact">
+				<h2>Contact</h2>
 				<p>If you wish to contact us about the landscaping services we offer or you want to talk through a project, you can do so in several different ways. By telephone on either 07714 280095 or 01823 257435. You can send us an <a href="mailto:jwhite2820@btinternet.com" title="Follow link to send us an email">Email</a> direct or you can use the form below to send us a message. Include your contact details and we will reply as soon as we can. Thank you.</p>
 				<?php
 					if ($action) {

@@ -14,6 +14,9 @@
 			border-bottom: 1px solid #096;
 		}
 	}
+	@include max_mq(600px) {
+		font-size: 1rem;
+	}
 }
 
 .telephone,
@@ -25,6 +28,9 @@
 	width: 50%;
 	img {
 		margin-top: 5px;
+		@include max_mq(600px) {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -36,5 +42,12 @@
 		display: inline-block;
 		font-size: 1.3rem;
 		padding: 0 10px;
+		@include max_mq(600px) {
+			font-size: 1.1rem;
+			padding: 0 4px;
+		}
+	}
+	@include max_mq(600px) {
+		margin-right: 10px;
 	}
 }

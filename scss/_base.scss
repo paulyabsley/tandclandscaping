@@ -8,6 +8,9 @@ body {
 	margin: 15px auto;
 	max-width: 960px;
 	padding: 15px;
+	@include max_mq(960px) {
+		margin: 0 auto;
+	}
 }
 
 main {
@@ -34,15 +37,45 @@ h1, h2 {
 	color: #060;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 1.4rem;
+	@include max_mq(600px) {
+		font-size: 1.2rem;
+	}
+}
+
+blockquote {
+	margin: 40px;
+	p {
+		color: #060;
+		display: inline;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-size: 1.3rem;
+		font-style: italic;
+		line-height: 1.5;
+		margin-bottom: 0;
+		max-width: 45rem;
+		width: 100%;
+	}
+	p + p {
+		margin-bottom: 20px;
+	}
+	cite {
+		color: #5bb55b;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-size: 1.3rem;
+		font-style: italic;
+		line-height: 1.5;
+	}
 }
 
 p {
 	color: #333;
-	font-size: 1em;
 	font-family: Arial, Calibri, Verdana;
 	line-height: 1.4;
 	max-width: 35rem;
 	width: 55%;
+	@include max_mq(600px) {
+		font-size: .9rem;
+	}
 }
 
 img {

@@ -18,12 +18,17 @@
 	}
 }
 
-.design {
+.design,
+.services {
 	div	{
 		width: 55%;
 	}
 	p {
 		width: 100%;
+	}
+	img {
+		margin-left: 5%;
+		width: 40%;
 	}
 }
 
@@ -32,4 +37,9 @@ main a img {
 	&:hover {
 		border: 9px solid #666;
 	}
+}
+
+.portfolio {
+	border-top: 1px solid #060;
+	padding-top: 20px;
 }
