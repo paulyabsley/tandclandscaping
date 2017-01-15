@@ -129,27 +129,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			</blockquote>
 			<div id="work" class="portfolio">
 				<h2>Our work</h2>
-				<p>Click the thumbnails below to see examples of driveways, fencing, patios, decking, gates, and walling we have created.</p>
-				<a href="images/l_workExample01.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample01.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample02.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample02.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample03.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample03.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample04.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample04.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample05.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample05.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample06.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample06.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample07.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample07.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample08.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample08.jpg" class="pictures" alt=""></a>
+				<p>Click the images below to see examples of projects we've&nbsp;completed.</p>
+				<a href="images/l_workExample01.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample01.jpg" alt=""></a>
+				<a href="images/l_workExample02.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample02.jpg" alt=""></a>
+				<a href="images/l_workExample03.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample03.jpg" alt=""></a>
+				<a href="images/l_workExample04.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample04.jpg" alt=""></a>
+				<a href="images/l_workExample05.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample05.jpg" alt=""></a>
+				<a href="images/l_workExample06.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample06.jpg" alt=""></a>
+				<a href="images/l_workExample07.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample07.jpg" alt=""></a>
+				<a href="images/l_workExample08.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample08.jpg" alt=""></a>
 				<blockquote cite="Karen Jones &mdash; Town &amp; Country Landscaping customer">
 					<p>&ldquo;Thank you for all your hard work on the driveway and the lawn, we are really pleased with them!&rdquo;</p>
 					<cite> &mdash;&nbsp;Karen&nbsp;Jones</p>
 				</blockquote>
-				<a href="images/l_workExample09.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample09.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample10.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample10.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample11.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample11.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample12.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample12.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample13.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample13.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample14.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample14.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample15.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample15.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample16.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample16.jpg" class="pictures" alt=""></a>
+				<a href="images/l_workExample09.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample09.jpg" alt=""></a>
+				<a href="images/l_workExample10.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample10.jpg" alt=""></a>
+				<a href="images/l_workExample11.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample11.jpg" alt=""></a>
+				<a href="images/l_workExample12.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample12.jpg" alt=""></a>
+				<a href="images/l_workExample13.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample13.jpg" alt=""></a>
+				<a href="images/l_workExample14.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample14.jpg" alt=""></a>
+				<a href="images/l_workExample15.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample15.jpg" alt=""></a>
+				<a href="images/l_workExample16.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample16.jpg" alt=""></a>
 				<blockquote cite="Peggy Hendy &mdash; Town &amp; Country Landscaping customer">
 					<p>&ldquo;Thanks to you both for a job well done, you have completely exceeded our expectations!&rdquo;</p>
 					<cite> &mdash;&nbsp;Peggy&nbsp;Hendy</cite>
@@ -159,10 +159,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<a href="images/l_workExample19.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample19.jpg" class="pictures" alt=""></a>
 				<a href="images/l_workExample20.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample20.jpg" class="pictures" alt=""></a>
 			</div>
-			<hr>
-			<div id="contact">
+			<div id="contact" class="contact">
 				<h2>Contact</h2>
-				<p>If you wish to contact us about the landscaping services we offer or you want to talk through a project, you can do so in several different ways. By telephone on either 07714 280095 or 01823 257435. You can send us an <a href="mailto:jwhite2820@btinternet.com" title="Follow link to send us an email">Email</a> direct or you can use the form below to send us a message. Include your contact details and we will reply as soon as we can. Thank you.</p>
+				<p>You can contact us about any of the services we offer or to talk through a project in several different ways. By telephone on either 07714 280095 or 01823 257435, <a href="mailto:jwhite2820@btinternet.com" title="Follow link to send us an email">emailing us directly</a> or using the contact form below.</p>
 				<?php
 					if ($action) {
 						echo '<h3>Message sent!</h3>
@@ -200,7 +199,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							<textarea name="message" id="message" rows="10" cols="300" class="text-area"><?= isset($message) ? htmlentities($message) : ''; ?></textarea>
 						</p>
 						<p>
-							<input type="submit" name="Submit" value="Submit" class="submit">
+							<input type="submit" name="submit" value="Send">
 						</p>
 					</fieldset>
 				</form>

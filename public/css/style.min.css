@@ -302,14 +302,30 @@ main a img {
   main a img:hover {
     border: 9px solid #666; }
 
-.portfolio {
+.portfolio,
+.contact {
   border-top: 1px solid #060;
+  margin-bottom: 20px;
   padding-top: 20px; }
+
+input,
+textarea {
+  border: 1px solid #060;
+  padding: .5rem; }
 
 footer {
   background-color: #999;
   background-image: url(../images/footerBg.jpg);
   background-size: cover;
+  color: #FFF;
+  font-size: .9rem;
   padding: 15px; }
+  footer p {
+    color: inherit;
+    margin-bottom: 0;
+    max-width: 100%;
+    width: 100%; }
+  footer a {
+    color: inherit; }
 
 /*# sourceMappingURL=style.min.css.map */

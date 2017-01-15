@@ -2,5 +2,16 @@ footer {
 	background-color: #999;
 	background-image: url(../images/footerBg.jpg);
 	background-size: cover;
+	color: #FFF;
+	font-size: .9rem;
 	padding: 15px;
+	p {
+		color: inherit;
+		margin-bottom: 0;
+		max-width: 100%;
+		width: 100%;
+	}
+	a {
+		color: inherit;
+	}
 }
