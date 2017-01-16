@@ -2,6 +2,22 @@
 session_start();
 $action = false;
 
+/**
+ * Output portfolio images
+ * @param int $s start
+ * @param int $e end
+ * @return string
+ */
+function display_portfolio_images($s, $e) {
+	for ($i = 1; $i <= 8; $i++) {
+		$c = '';
+		if ($i % 4 === 0) {
+			$c = ' pi--last-img';
+		}
+		echo '<a href="images/l-example-' . $i . '.jpg" rel="lightbox[examples]"><img src="images/s-example-' . $i . '.jpg" alt="" class="pi' . $c . '"></a>';
+	}
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$_SESSION["name"] = $_POST["name"];
 	$_SESSION["telephone"] = $_POST["telephone"];
@@ -130,34 +146,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<div id="work" class="portfolio">
 				<h2>Our work</h2>
 				<p>Click the images below to see examples of projects we've&nbsp;completed.</p>
-				<a href="images/l_workExample01.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample01.jpg" alt=""></a>
-				<a href="images/l_workExample02.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample02.jpg" alt=""></a>
-				<a href="images/l_workExample03.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample03.jpg" alt=""></a>
-				<a href="images/l_workExample04.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample04.jpg" alt=""></a>
-				<a href="images/l_workExample05.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample05.jpg" alt=""></a>
-				<a href="images/l_workExample06.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample06.jpg" alt=""></a>
-				<a href="images/l_workExample07.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample07.jpg" alt=""></a>
-				<a href="images/l_workExample08.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample08.jpg" alt=""></a>
+				<?= display_portfolio_images(1, 8); ?>
 				<blockquote cite="Karen Jones &mdash; Town &amp; Country Landscaping customer">
 					<p>&ldquo;Thank you for all your hard work on the driveway and the lawn, we are really pleased with them!&rdquo;</p>
 					<cite> &mdash;&nbsp;Karen&nbsp;Jones</p>
 				</blockquote>
-				<a href="images/l_workExample09.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample09.jpg" alt=""></a>
-				<a href="images/l_workExample10.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample10.jpg" alt=""></a>
-				<a href="images/l_workExample11.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample11.jpg" alt=""></a>
-				<a href="images/l_workExample12.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample12.jpg" alt=""></a>
-				<a href="images/l_workExample13.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample13.jpg" alt=""></a>
-				<a href="images/l_workExample14.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample14.jpg" alt=""></a>
-				<a href="images/l_workExample15.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample15.jpg" alt=""></a>
-				<a href="images/l_workExample16.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample16.jpg" alt=""></a>
+				<?= display_portfolio_images(9, 16); ?>
 				<blockquote cite="Peggy Hendy &mdash; Town &amp; Country Landscaping customer">
 					<p>&ldquo;Thanks to you both for a job well done, you have completely exceeded our expectations!&rdquo;</p>
 					<cite> &mdash;&nbsp;Peggy&nbsp;Hendy</cite>
 				</blockquote>
-				<a href="images/l_workExample17.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample17.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample18.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample18.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample19.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample19.jpg" class="pictures" alt=""></a>
-				<a href="images/l_workExample20.jpg" rel="lightbox[hmExamples]"><img src="images/s_workExample20.jpg" class="pictures" alt=""></a>
+				<?= display_portfolio_images(17, 20); ?>
 			</div>
 			<div id="contact" class="contact">
 				<h2>Contact</h2>

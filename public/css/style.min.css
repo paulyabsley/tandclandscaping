@@ -301,12 +301,41 @@ main a img {
   border: 9px solid #999; }
   main a img:hover {
     border: 9px solid #666; }
+  @media screen and (max-width: 800px) {
+    main a img {
+      border: 7px solid #999; }
+      main a img:hover {
+        border: 7px solid #666; } }
 
 .portfolio,
 .contact {
   border-top: 1px solid #060;
   margin-bottom: 20px;
   padding-top: 20px; }
+
+.pi {
+  margin-bottom: 15px;
+  margin-right: 15px;
+  width: 23%; }
+  @media screen and (max-width: 800px) {
+    .pi {
+      width: 22%; } }
+  @media screen and (max-width: 600px) {
+    .pi {
+      margin-bottom: 10px;
+      margin-right: 10px; } }
+  @media screen and (max-width: 400px) {
+    .pi {
+      width: 44%; } }
+  @media screen and (max-width: 300px) {
+    .pi {
+      width: 43%; } }
+
+.pi--last-img {
+  margin-right: 0; }
+  @media screen and (max-width: 400px) {
+    .pi--last-img {
+      margin-right: 10px; } }
 
 input,
 textarea {
