@@ -133,11 +133,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<cite> &mdash;&nbsp;Mike and Maggie&nbsp;Blake</cite>
 			</blockquote>
 			<div class="services cf">
-				<div class="left">
+				<a href="images/l_blockDriveway02.jpg" rel="lightbox" title="Town &amp; Country Landscaping block pavior drive and entrance way"><img src="images/s_blockDriveway02.jpg" alt="Block pavior drive and entrance way" class="left"></a>
+				<div class="right">
 					<p>We source and use the best high quality materials to create handsome, usable and convenient outdoor spaces &mdash; from driveways and patios to fencing, gates and decking, or turfing and brick or stone walling &mdash; that can add value to your property.</p>
 					<p>If you would like a no obligations quote please give us a call. We can arrange to visit you and discuss your requirements. It may also be possible to arrange viewings of some of the contracts which we have completed.</p>
 				</div>
-				<a href="images/l_blockDriveway02.jpg" rel="lightbox" title="Town &amp; Country Landscaping block pavior drive and entrance way"><img src="images/s_blockDriveway02.jpg" alt="Block pavior drive and entrance way" class="right"></a>
 			</div>
 			<blockquote>
 				<p>&ldquo;Thank you so much for a wonderful job. My friends and family are well impressed and I am over the moon!&rdquo;</p>

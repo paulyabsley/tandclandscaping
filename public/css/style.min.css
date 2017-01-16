@@ -294,8 +294,13 @@ header {
   width: 100%; }
 .design img,
 .services img {
-  margin-left: 5%;
   width: 40%; }
+
+.design img {
+  margin-left: 5%; }
+
+.services img {
+  margin-left: 0; }
 
 main a img {
   border: 9px solid #999; }
