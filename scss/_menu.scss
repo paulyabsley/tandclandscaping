@@ -5,17 +5,11 @@
 	font-size: 1.2rem;
 	margin-bottom: 20px;
 	padding-bottom: 15px;
-	a {
-		color: inherit;
-		font-size: inherit;
-		text-decoration: none;
-		&:hover {
-			color: #096;
-			border-bottom: 1px solid #096;
-		}
-	}
 	@include max_mq(600px) {
 		font-size: 1rem;
+	}
+	@include max_mq(500px) {
+
 	}
 }
 
@@ -32,6 +26,10 @@
 			margin-top: 0;
 		}
 	}
+	@include max_mq(400px) {
+		float: none;
+		width: 100%;
+	}
 }
 
 .nav {
@@ -46,8 +44,19 @@
 			font-size: 1.1rem;
 			padding: 0 4px;
 		}
+		@include max_mq(500px) {
+			font-size: 1rem;
+			padding: 0 4px 0 0;
+		}
 	}
 	@include max_mq(600px) {
 		margin-right: 10px;
+	}
+	@include max_mq(500px) {
+		margin-right: 0;
+	}
+	@include max_mq(400px) {
+		float: none;
+		text-align: right;
 	}
 }

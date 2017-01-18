@@ -54,6 +54,15 @@ blockquote {
 		margin-bottom: 0;
 		max-width: 45rem;
 		width: 100%;
+		@include max_mq(800px) {
+			font-size: 1.2rem;
+		}
+		@include max_mq(600px) {
+			font-size: 1.1rem;
+		}
+		@include max_mq(400px) {
+			font-size: 1rem;
+		}
 	}
 	p + p {
 		margin-bottom: 20px;
@@ -61,9 +70,18 @@ blockquote {
 	cite {
 		color: #5bb55b;
 		font-family: Georgia, "Times New Roman", Times, serif;
-		font-size: 1.3rem;
+		font-size: inherit;
 		font-style: italic;
 		line-height: 1.5;
+	}
+	@include max_mq(800px) {
+		margin: 30px;
+	}
+	@include max_mq(600px) {
+		margin: 20px;
+	}
+	@include max_mq(400px) {
+		margin: 20px 0;
 	}
 }
 
@@ -75,6 +93,9 @@ p {
 	width: 55%;
 	@include max_mq(600px) {
 		font-size: .9rem;
+	}
+	@include max_mq(500px) {
+		width: 100%;
 	}
 }
 
@@ -88,4 +109,19 @@ img {
 
 .right {
 	float: right;
+	@include max_mq(500px) {
+		float: none;
+	}
+}
+
+p a,
+li a {
+	color: #060;
+	font-size: inherit;
+	text-decoration: none;
+	&:hover,
+	&:active {
+		color: #096;
+		border-bottom: 1px solid #096;
+	}
 }

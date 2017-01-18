@@ -1,5 +1,39 @@
 input,
 textarea {
 	border: 1px solid #060;
-	padding: .5rem;
+	padding: .6rem;
+}
+
+legend,
+.hp {
+	display: none;
+}
+
+fieldset > div {
+	margin-bottom: 1rem;
+}
+
+label {
+	display: block;
+	font-family: Arial, Calibri, Verdana;
+	margin-bottom: 5px;
+}
+
+input,
+textarea {
+	font-size: inherit;
+	width: 60%;
+	@include max_mq(800px) {
+		width: 100%;
+	}
+}
+
+input[type="submit"] {
+	background: #096;
+	color: #FFF;
+	cursor: pointer;
+	&:hover,
+	&:active {
+		background: #488648;
+	}
 }

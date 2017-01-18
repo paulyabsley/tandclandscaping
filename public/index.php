@@ -174,29 +174,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<form action="#contactUs" id="contactForm" method="post">
 					<fieldset>
 						<legend>Contact Form</legend>
-						<p>
+						<div>
 							<label for="name" class="labels">Name</label>
-							<input type="text" name="name" id="name" maxlength="75" value="<?= isset($name) ? htmlentities($name) : ''; ?>" class="text-input">
-						</p>
-						<p>
+							<input type="text" name="name" id="name" maxlength="75" value="<?= isset($name) ? htmlentities($name) : ''; ?>">
+						</div>
+						<div>
 							<label for="telephone">Telephone</label>
-							<input type="text" name="telephone" id="telephone" maxlength="50" value="<?= isset($telephone) ? htmlentities($telephone) : ''; ?>" class="text-input">
-						</p>
-						<p>
+							<input type="text" name="telephone" id="telephone" maxlength="50" value="<?= isset($telephone) ? htmlentities($telephone) : ''; ?>">
+						</div>
+						<div>
 							<label for="email">Email Address</label>
-							<input type="email" name="email" id="email" maxlength="50" value="<?= isset($email) ? htmlentities($email) : ''; ?>" class="text-input">
-						</p>
-						<p class="hp">
+							<input type="email" name="email" id="email" maxlength="50" value="<?= isset($email) ? htmlentities($email) : ''; ?>">
+						</div>
+						<div class="hp">
 							<label for="messageSubject">Subject</label>
-							<input type="text" name="messageSubject" id="messageSubject" maxlength="255" value="<?= isset($messageSubject) ? htmlentities($messageSubject) : ''; ?>" class="text-input">
-						</p>
-						<p>
+							<input type="text" name="messageSubject" id="messageSubject" maxlength="255" value="<?= isset($messageSubject) ? htmlentities($messageSubject) : ''; ?>">
+						</div>
+						<div>
 							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="10" cols="300" class="text-area"><?= isset($message) ? htmlentities($message) : ''; ?></textarea>
-						</p>
-						<p>
+							<textarea name="message" id="message" rows="10" cols="300"><?= isset($message) ? htmlentities($message) : ''; ?></textarea>
+						</div>
+						<div>
 							<input type="submit" name="submit" value="Send">
-						</p>
+						</div>
 					</fieldset>
 				</form>
 				<?php

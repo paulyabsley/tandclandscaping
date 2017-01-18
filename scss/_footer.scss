@@ -13,5 +13,10 @@ footer {
 	}
 	a {
 		color: inherit;
+		&:hover,
+		&:active {
+			border-bottom: 1px solid #fff;
+			color: #FFF;
+		}
 	}
 }
