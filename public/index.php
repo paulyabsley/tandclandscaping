@@ -14,7 +14,7 @@ function display_portfolio_images($s, $e) {
 		if ($i % 4 === 0) {
 			$c = ' pi--last-img';
 		}
-		echo '<a href="images/l-example-' . $i . '.jpg" rel="lightbox[examples]"><img src="images/s-example-' . $i . '.jpg" alt="" class="pi' . $c . '"></a>';
+		echo '<a href="images/l-example-' . $i . '.jpg"><img src="images/s-example-' . $i . '.jpg" alt="" class="pi' . $c . '"></a>';
 	}
 }
 
@@ -76,9 +76,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<title>Town &amp; Country Landscaping | Somerset Landscape Gardeners</title>
 	<meta name="description" content="Town &amp; Country Landscaping are an established providers of all manner of landscaping services; driveways, patios, walling, fencing, block paviors, gates, brickwork and more.">
 	<link rel="stylesheet" href="css/style.min.css">
-	<script type="text/javascript" src="js/prototype.js"></script>
-	<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
-	<script type="text/javascript" src="js/lightbox.js"></script>
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-19616688-5']);
@@ -112,11 +109,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<div class="intro cf">
 				<h1>Town &amp; Country Landscaping</h1>
 				<p class="left">Operating from the county town of Somerset Taunton, Town &amp; Country Landscaping are an established company providing high quality, private landscaping services to the area for over 10 years. Andy Yabsley and John White, the company partners, offer a friendly, professional service from start to finish with emphasis on high standards, whatever the requirements.</p>
-				<a href="images/l_patio01.jpg" rel="lightbox" title="Town &amp; Country Landscaping Garden Patio"><img src="images/s_patio01.jpg" alt="Block pavior garden patio" class="right"></a>
+				<a href="images/l_patio01.jpg" class="pop-up" title="Town &amp; Country Landscaping Garden Patio"><img src="images/s_patio01.jpg" alt="Block pavior garden patio" class="right"></a>
 			</div>
 			<div class="driveways cf">
 				<h2>Driveways, patios and fencing</h2>
-				<a href="images/l_blockDriveway01.jpg" rel="lightbox" title="Town &amp; Country Landscaping block pavior driveway"><img src="images/s_blockDriveway01.jpg" alt="Block pavior driveway" class="left"></a>
+				<a href="images/l_blockDriveway01.jpg" class="pop-up" title="Town &amp; Country Landscaping block pavior driveway"><img src="images/s_blockDriveway01.jpg" alt="Block pavior driveway" class="left"></a>
 				<p class="right">We specialise in driveways, patios and fencing, but also offer a range of other landscaping services such as decking, turfing and brick or stone walling. Close links with other relevant professionals such as builders, tree surgeons and with a range of suppliers means that we are able to deliver almost anything you may wish for in your garden.</p>
 			</div>
 			<div class="design cf">
@@ -126,14 +123,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<h2>Garden design</h2>
 					<p>We can undertake complete garden make overs to our own design or work with designs from other landscape architects.</p>
 				</div>
-				<a href="images/l_timberFrame01.jpg" rel="lightbox" title="Town &amp; Country Landscaping timber frame garage"><img src="images/s_timberFrame01.jpg" alt="Timber frame car port" class="right"></a>
+				<a href="images/l_timberFrame01.jpg" class="pop-up" title="Town &amp; Country Landscaping timber frame garage"><img src="images/s_timberFrame01.jpg" alt="Timber frame car port" class="right"></a>
 			</div>
 			<blockquote>
 				<p>&ldquo;Very many thanks for the excellent work on my greenhouse base (now my second home!) and for our lovely new patio, it has made such a difference. We were very impressed, not only with the quality of your work but also by your entire work ethic. You turned up when you said you would, consulted us at every turn and left all clean and tidy &mdash; you are in great danger of giving the building profession a good name!&rdquo;</p>
 				<cite> &mdash;&nbsp;Mike and Maggie&nbsp;Blake</cite>
 			</blockquote>
 			<div class="services cf">
-				<a href="images/l_blockDriveway02.jpg" rel="lightbox" title="Town &amp; Country Landscaping block pavior drive and entrance way"><img src="images/s_blockDriveway02.jpg" alt="Block pavior drive and entrance way" class="left"></a>
+				<a href="images/l_blockDriveway02.jpg" class="pop-up" title="Town &amp; Country Landscaping block pavior drive and entrance way"><img src="images/s_blockDriveway02.jpg" alt="Block pavior drive and entrance way" class="left"></a>
 				<div class="right">
 					<p>We source and use the best high quality materials to create handsome, usable and convenient outdoor spaces &mdash; from driveways and patios to fencing, gates and decking, or turfing and brick or stone walling &mdash; that can add value to your property.</p>
 					<p>If you would like a no obligations quote please give us a call. We can arrange to visit you and discuss your requirements. It may also be possible to arrange viewings of some of the contracts which we have completed.</p>
@@ -212,5 +209,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<p>&copy; <?= date('Y'); ?> Town &amp; Country Landscaping | <a href="http://www.uksmallbusinessdirectory.co.uk/id.asp?CompanyID=127513" title="UK Small Business Directory Listing">UKSBD Listing</a></p>
 		</footer>
 	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/magnific-popup.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.pop-up').magnificPopup({
+				type: 'image'
+			});
+			$('.portfolio').magnificPopup({
+				delegate: 'a', // child items selector, by clicking on it popup will open
+				type: 'image',
+				gallery: {
+					enabled:true
+				}
+				// other options
+			});
+		});
+	</script>
 </body>
 </html>
