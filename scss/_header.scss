@@ -10,7 +10,11 @@ header {
 .logo {
 	display: block;
 	margin: 0 auto;
+	width: 40%;
 	@include max_mq(600px) {
-		
+		width: 50%;
+	}
+	@include max_mq(400px) {
+		width: 60%;
 	}
 }
