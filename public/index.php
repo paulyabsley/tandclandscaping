@@ -138,7 +138,7 @@ echo $html->b;
 						echo '</div>';
 					}
 			?>
-			<form action="#contactUs" id="contactForm" method="post">
+			<form action="#contact" id="contactForm" method="post">
 				<fieldset>
 					<legend>Contact Form</legend>
 					<div>

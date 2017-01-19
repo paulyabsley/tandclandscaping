@@ -33,6 +33,7 @@ class Mail
 		$mail->addReplyTo($email, $name);
 		$mail->isHTML(true);
 		$mail->addAddress('jwhite2820@btinternet.com', 'John White');
+		// $mail->addAddress('yabsleyp@gmail.com', 'Paul Yabsley');
 		$mail->Subject = $subject;
 		$mail->Body = $body;
 		if (!$mail->send()) {

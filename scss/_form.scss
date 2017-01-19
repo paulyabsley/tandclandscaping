@@ -37,3 +37,10 @@ input[type="submit"] {
 		background: #488648;
 	}
 }
+
+.errors p {
+	background: #dc3232;
+	color: #fff;
+	padding: 10px 15px;
+	font-style: italic;
+}
