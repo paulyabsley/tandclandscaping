@@ -1,22 +1,8 @@
 <?php
+require_once('../private/init.php');
+
 session_start();
 $action = false;
-
-/**
- * Output portfolio images
- * @param int $s start
- * @param int $e end
- * @return string
- */
-function display_portfolio_images($s, $e) {
-	for ($i = 1; $i <= 8; $i++) {
-		$c = '';
-		if ($i % 4 === 0) {
-			$c = ' pi--last-img';
-		}
-		echo '<a href="images/l-example-' . $i . '.jpg"><img src="images/s-example-' . $i . '.jpg" alt="" class="pi' . $c . '"></a>';
-	}
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$_SESSION["name"] = $_POST["name"];
@@ -59,35 +45,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		$sent = mail($to, $subject, $body, $headers);
 
+		$sent = Mail::send('John White', $to, 'Town & Country Landscaping Contact Form', $body);
+		
+
+
+
+
+		
+
+
+		var_dump($sent);
+
+		
+
+
+
+
+
+
 		if ($sent) {
 			$action = true;
 			session_destroy();
 		}
 	}
 }
-?>
 
-<!doctype html>
-<html dir="ltr" lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Town &amp; Country Landscaping | Somerset Landscape Gardeners</title>
-	<meta name="description" content="Town &amp; Country Landscaping are an established providers of all manner of landscaping services; driveways, patios, walling, fencing, block paviors, gates, brickwork and more.">
-	<link rel="stylesheet" href="css/style.css">
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-19616688-5']);
-	  _gaq.push(['_trackPageview']);
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
-</head>
-<body id="top">
+$description = 'Town &amp; Country Landscaping are an established providers of all manner of landscaping services; driveways, patios, walling, fencing, block paviors, gates, brickwork and more.';
+$html = new Html('Town &amp; Country Landscaping | Somerset Landscape Gardeners', $description);
+echo $html->h;
+echo $html->b;
+?>
 	<div class="wrapper">
 		<header>
 			<img src="images/logo.png" alt="Town &amp; Country Landscaping" class="logo">
@@ -143,17 +130,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<div id="work" class="portfolio">
 				<h2>Our work</h2>
 				<p>Click the images below to see examples of projects we've&nbsp;completed.</p>
-				<?= display_portfolio_images(1, 8); ?>
+				<?= $html->displayPortfolioImages(1, 8); ?>
 				<blockquote cite="Karen Jones &mdash; Town &amp; Country Landscaping customer">
 					<p>&ldquo;Thank you for all your hard work on the driveway and the lawn, we are really pleased with them!&rdquo;</p>
 					<cite> &mdash;&nbsp;Karen&nbsp;Jones</p>
 				</blockquote>
-				<?= display_portfolio_images(9, 16); ?>
+				<?= $html->displayPortfolioImages(9, 16); ?>
 				<blockquote cite="Peggy Hendy &mdash; Town &amp; Country Landscaping customer">
 					<p>&ldquo;Thanks to you both for a job well done, you have completely exceeded our expectations!&rdquo;</p>
 					<cite> &mdash;&nbsp;Peggy&nbsp;Hendy</cite>
 				</blockquote>
-				<?= display_portfolio_images(17, 20); ?>
+				<?= $html->displayPortfolioImages(17, 20); ?>
 			</div>
 			<div id="contact" class="contact">
 				<h2>Contact</h2>
@@ -209,7 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<p>&copy; <?= date('Y'); ?> Town &amp; Country Landscaping | <a href="http://www.uksmallbusinessdirectory.co.uk/id.asp?CompanyID=127513" title="UK Small Business Directory Listing">UKSBD Listing</a></p>
 		</footer>
 	</div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
 	<script type="text/javascript" src="js/magnific-popup.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -222,9 +209,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				gallery: {
 					enabled:true
 				}
-				// other options
 			});
 		});
 	</script>
-</body>
-</html>
+<?php
+echo $html->f;
