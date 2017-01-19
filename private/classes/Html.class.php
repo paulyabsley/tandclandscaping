@@ -7,6 +7,8 @@ class Html
 	public $b;
 	public $f;
 	public $jq;
+	public $mp;
+	public $js;
 	public $m;
 
 	function __construct($t, $d)
@@ -15,6 +17,8 @@ class Html
 		$this->b = $this->body();
 		$this->f = $this->footer();
 		$this->jq = $this->jquery();
+		$this->mp = $this->magnificPopUp();
+		$this->js = $this->appJs();
 		$this->m = $this->menu();
 	}
 
@@ -54,7 +58,7 @@ class Html
 	 */
 	private function ga()
 	{
-		return "<script type=\"text/javascript\">
+		return "<script>
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-19616688-5']);
 		_gaq.push(['_trackPageview']);
@@ -64,6 +68,24 @@ class Html
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 		</script>";
+	}
+
+	/**
+	 * Output Magnific Popup Script
+	 * @return string
+	 */
+	private function magnificPopUp()
+	{
+		return '<script src="js/magnific-popup.js"></script>';
+	}
+
+	/**
+	 * Output App Scripts
+	 * @return string
+	 */
+	private function appJs()
+	{
+		return '<script src="js/app.js"></script>';
 	}
 
 	/**

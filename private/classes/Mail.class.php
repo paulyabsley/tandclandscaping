@@ -30,13 +30,13 @@ class Mail
 		$mail->Port = 587;
 		$mail->SMTPAuth = true;
 		$mail->setFrom('tandclandscapingtaunton@gmail.com', 'tandclandscaping.co.uk');
+		$mail->addReplyTo($email, $name);
 		$mail->isHTML(true);
-		$mail->addAddress($email, $name);
+		$mail->addAddress('jwhite2820@btinternet.com', 'John White');
 		$mail->Subject = $subject;
 		$mail->Body = $body;
 		if (!$mail->send()) {
 			error_log($mail->ErrorInfo);
-			return $mail->ErrorInfo;
 			return false;
 		} else {
 			return true;
